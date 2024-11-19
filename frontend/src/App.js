@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import Sidebar from './components/Sidebar';
 import Header from './components/Header';
 import Dashboard from './pages/Dashboard';
@@ -21,7 +21,9 @@ function App() {
         <div className="main-content">
           <Header />
           <Routes>
-            <Route path="/" element={<Dashboard />} />
+            {/* Redirect from '/' to '/dashboard' */}
+            <Route path="/" element={<Navigate to="/dashboard" />} />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/inventory" element={<Inventory />} />
             <Route path="/orders" element={<Orders />} />
             <Route path="/invoices" element={<Invoices />} />
@@ -29,7 +31,7 @@ function App() {
             <Route path="/reports" element={<Reports />} />
             <Route path="/settings" element={<Settings />} />
             <Route path="/signin" element={<SignIn />} />
-            <Route path="/register" element={<Register />}/>
+            <Route path="/register" element={<Register />} />
             <Route path="*" element={<h2>404 - Page Not Found</h2>} />
           </Routes>
         </div>
