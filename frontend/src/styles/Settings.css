@@ -1,0 +1,120 @@
+/* styles.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+}
+
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.settings-section {
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.settings-section h3 {
+  color: #333;
+  font-size: 1.2em;
+}
+
+.setting-item {
+  margin-bottom: 15px;
+}
+
+.setting-item label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.setting-item select, .setting-item input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.setting-item input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.save-settings {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.save-settings button {
+  padding: 12px 25px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.save-settings button:hover {
+  background-color: #45a049;
+}
+
+.account-section {
+  text-align: center;
+}
+
+.account-section p {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.sign-out-button {
+  padding: 10px 20px;
+  background-color: #FF6347;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.sign-out-button:hover {
+  background-color: #e5533d;
+}
+
+@media (max-width: 768px) {
+  .settings-container {
+    padding: 15px;
+  }
+
+  .settings-section {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .save-settings button {
+    padding: 10px 20px;
+  }
+
+  .sign-out-button {
+    padding: 8px 18px;
+  }
+}

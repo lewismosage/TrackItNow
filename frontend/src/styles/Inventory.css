@@ -1,0 +1,129 @@
+/* Container styling for the Inventory header */
+.inventory-container h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between elements */
+}
+
+/* Styling for the search bar */
+.search-bar {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  outline: none;
+  width: 250px;
+  margin-right: 0rem;
+  transition: border-color 0.2s ease;
+}
+
+/* Placeholder color */
+.search-bar::placeholder {
+  color: #9ca3af;
+}
+
+/* Focus state for the search bar */
+.search-bar:focus {
+  border-color: #3730a3;
+  box-shadow: 0 0 5px rgba(71, 56, 163, 0.5); 
+}
+
+/* Styling for the search button */
+.inventory-container button {
+  background-color: #4f46e5;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Hover effect for the search button */
+.inventory-container button:hover {
+  background-color: #3730a3;
+}
+
+/* Space out the button and input field for a cleaner look */
+.inventory-container input.search-bar + button {
+  margin-left: 5px; /* Space between search bar and button */
+  margin-right: 300px;
+}
+
+/* Styling for the Location button */
+.location-btn {
+  background-color: #4f46e5;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 1%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.location-btn:hover {
+  background-color: #1e40af;
+}
+
+/* Styling for the Add Items button */
+.add-item-btn {
+  background-color: white;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin-left: 15px;
+  border-radius: 1%;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+/* Styling for the Location Dropdown */
+.location-dropdown {
+  padding: 0.4rem 1rem;
+  font-size: 16px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 50px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: border-color 0.2s ease;
+}
+
+/* Focus effect for the location dropdown */
+.location-dropdown:focus {
+  border-color: #3730a3;
+  box-shadow: 0 0 5px rgba(71, 56, 163, 0.5); 
+}
+
+/* Styling when the location dropdown is visible */
+.location-btn + .location-dropdown {
+  display: inline-block;
+}
+
+
+
+.add-item-section {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.add-item-section input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.add-item-section button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
+.add-item-btn:hover {
+  background-color: #15803d;
+}

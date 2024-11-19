@@ -1,0 +1,50 @@
+/* Header.css */
+.header {
+  background-color: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  position: fixed;
+  top: 0;
+  left: 250px; 
+  right: 0;
+  height: 70px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.header input[type="text"] {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  outline: none;
+  width: 250px;
+  margin-right: 1rem;
+  transition: border-color 0.2s ease;
+}
+
+.header input[type="text"]:focus {
+  border-color: #4f46e5;
+}
+
+.header button {
+  background-color: #4f46e5;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.header button:hover {
+  background-color: #3730a3;
+}
+
+.header span {
+  margin-left: auto;
+  margin-right: 1rem;
+  font-weight: bold;
+  color: #1f2937;
+}
