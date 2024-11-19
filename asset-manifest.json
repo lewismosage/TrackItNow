@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.67793331.css",
-    "main.js": "/static/js/main.e1566095.js",
-    "static/js/453.add26a43.chunk.js": "/static/js/453.add26a43.chunk.js",
-    "static/media/password.png": "/static/media/password.adcd6e686448d893855c.png",
-    "static/media/email.png": "/static/media/email.66cf52f2342f17f1f491.png",
-    "static/media/person.png": "/static/media/person.7419e33fa2e0a06c620d.png",
-    "index.html": "/index.html",
-    "main.67793331.css.map": "/static/css/main.67793331.css.map",
-    "main.e1566095.js.map": "/static/js/main.e1566095.js.map",
-    "453.add26a43.chunk.js.map": "/static/js/453.add26a43.chunk.js.map"
+    "main.css": "/TrackItNow/static/css/main.67793331.css",
+    "main.js": "/TrackItNow/static/js/main.e780dc53.js",
+    "static/js/453.add26a43.chunk.js": "/TrackItNow/static/js/453.add26a43.chunk.js",
+    "static/media/password.png": "/TrackItNow/static/media/password.adcd6e686448d893855c.png",
+    "static/media/email.png": "/TrackItNow/static/media/email.66cf52f2342f17f1f491.png",
+    "static/media/person.png": "/TrackItNow/static/media/person.7419e33fa2e0a06c620d.png",
+    "index.html": "/TrackItNow/index.html",
+    "main.67793331.css.map": "/TrackItNow/static/css/main.67793331.css.map",
+    "main.e780dc53.js.map": "/TrackItNow/static/js/main.e780dc53.js.map",
+    "453.add26a43.chunk.js.map": "/TrackItNow/static/js/453.add26a43.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.67793331.css",
-    "static/js/main.e1566095.js"
+    "static/js/main.e780dc53.js"
   ]
 }
