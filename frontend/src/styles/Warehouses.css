@@ -1,0 +1,361 @@
+.warehouses-container {
+    padding: 2rem;
+    background-color: #f9fafb;
+    min-height: calc(100vh - 60px);
+    margin-top: 60px;
+}
+
+.warehouses-header {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.header-title h2 {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #111827;
+}
+
+.warehouse-count {
+    background-color: #e0e7ff;
+    color: #4f46e5;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+}
+
+.header-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-container {
+    position: relative;
+    flex: 1;
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6b7280;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 6px;
+    font-size: 0.875rem;
+}
+
+.add-warehouse-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    width: 20%;
+}
+
+.warehouses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+.warehouse-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+}
+
+.warehouse-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.warehouse-icon {
+    background-color: #e0e7ff;
+    color: #4f46e5;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.warehouse-info h3 {
+    margin: 0 0 0.25rem 0;
+    font-size: 1.125rem;
+    color: #111827;
+}
+
+.status-badge {
+    display: inline-block;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+.status-badge.active {
+    background-color: #d1fae5;
+    color: #059669;
+}
+
+.status-badge.inactive {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.warehouse-details {
+    margin-bottom: 1.5rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    color: #4b5563;
+    font-size: 0.875rem;
+}
+
+.detail-icon {
+    color: #6b7280;
+}
+
+.capacity-section {
+    margin-bottom: 1.5rem;
+}
+
+.capacity-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.capacity-header h4 {
+    margin: 0;
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+.capacity-bar {
+    height: 8px;
+    background-color: #e5e7eb;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.capacity-fill {
+    height: 100%;
+    transition: width 0.3s ease;
+}
+
+.capacity-fill.good {
+    background-color: #059669;
+}
+
+.capacity-fill.warning {
+    background-color: #d97706;
+}
+
+.capacity-fill.critical {
+    background-color: #dc2626;
+}
+
+.capacity-details {
+    margin-top: 0.5rem;
+    font-size: 0.75rem;
+    color: #6b7280;
+    text-align: right;
+}
+
+.zones-section {
+    margin-bottom: 1.5rem;
+}
+
+.zones-section h4 {
+    margin: 0 0 0.5rem 0;
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+.zones-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.zone-badge {
+    background-color: #f3f4f6;
+    color: #374151;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+}
+
+.warehouse-actions {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1rem;
+}
+
+.warehouse-actions button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.view-inventory-btn {
+    background-color: #e0e7ff;
+    color: #4f46e5;
+}
+
+.transfer-btn {
+    background-color: #dbeafe;
+    color: #2563eb;
+}
+
+.edit-btn {
+    background-color: #f3f4f6;
+    color: #374151;
+}
+
+.delete-btn {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+@media (max-width: 1024px) {
+    .warehouses-grid {
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .warehouses-container {
+        padding: 1rem;
+    }
+
+    .header-actions {
+        flex-direction: column;
+    }
+
+    .search-container {
+        width: 100%;
+    }
+
+    .add-warehouse-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .warehouse-actions {
+        flex-wrap: wrap;
+    }
+
+    .warehouse-actions button {
+        flex: 1;
+        justify-content: center;
+    }
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.modal-actions button {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-actions button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.modal-actions button[type="button"] {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+} 

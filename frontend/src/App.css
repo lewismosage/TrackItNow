@@ -1,0 +1,170 @@
+/* App.css */
+.app-container {
+  display: flex;
+  min-height: 100vh;
+  width: 90%;
+  margin-left: 8%;
+  position: relative;
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+  transition: margin-left 0.3s ease;
+  position: relative;
+  margin-left: 0;
+}
+
+.content {
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 2rem;
+}
+
+table th,
+table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+table th {
+  background-color: #4f46e5;
+  color: #fff;
+}
+
+table tr:hover {
+  background-color: #f1f5f9;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+  
+  .header {
+    left: 200px;
+  }
+
+  .header input[type="text"] {
+    width: 150px;
+  }
+
+  .main-content {
+    margin-left: 200px;
+  }
+
+  .sidebar-overlay.active {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 60px;
+    overflow: hidden;
+  }
+
+  .sidebar h2,
+  .sidebar ul li a {
+    display: none;
+  }
+
+  .sidebar ul li {
+    text-align: center;
+  }
+
+  .header {
+    left: 60px;
+  }
+
+  .main-content {
+    margin-left: 60px;
+  }
+
+  .sidebar-overlay.active {
+    display: block;
+  }
+}
+
+/* Styling for the buttons inside table cells */
+table td button {
+  background-color: #4f46e5; 
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  margin-right: 5px; 
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-size: 0.9rem;
+}
+
+/* Specific styling for the Edit button */
+table td button:first-of-type {
+  background-color: #22c55e; 
+}
+
+table td button:first-of-type:hover {
+  background-color: #15803d; 
+}
+
+/* Specific styling for the Delete button */
+table td button:last-of-type {
+  background-color: #ef4444; 
+}
+
+table td button:last-of-type:hover {
+  background-color: #b91c1c; 
+}
+
+.auth-prompt {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  margin: 20px;
+}
+
+.auth-prompt button {
+  background: #667eea;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.auth-prompt button:hover {
+  background: #5a67d8;
+}
+
+
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+@media (max-width: 768px) {
+  .sidebar-overlay.active {
+    display: block;
+  }
+}

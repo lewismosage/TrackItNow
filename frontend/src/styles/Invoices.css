@@ -1,0 +1,399 @@
+/* styles.css */
+h2 {
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+ 
+}
+
+.invoice-container, .customer-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.invoice-form, .customer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.invoice-form input, .customer-form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.invoice-form button, .customer-form button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.invoice-form button:hover, .customer-form button:hover {
+  background-color: #45a049;
+}
+
+.invoice-list, .customer-list {
+  margin-top: 30px;
+}
+
+/* Main Container */
+.invoices-main-container {
+    padding: 2rem;
+    background-color: #f9fafb;
+    min-height: calc(100vh - 60px);
+    margin-top: 60px;
+    margin-left: -50px;
+    width: calc(100% + 50px);
+}
+
+/* Header Section */
+.invoices-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.header-title h2 {
+    font-size: 1.875rem;
+    font-weight: 600;
+    color: #111827;
+    margin: 0;
+}
+
+.invoice-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.stats-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.status-total {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: 500;
+}
+
+.status-total.paid {
+    background-color: rgba(0, 200, 81, 0.1);
+    color: #00c851;
+}
+
+.status-total.pending {
+    background-color: rgba(255, 187, 51, 0.1);
+    color: #ffbb33;
+}
+
+.status-total.cancelled {
+    background-color: rgba(255, 65, 65, 0.1);
+    color: #ff4141;
+}
+
+.status-total.overdue {
+    background-color: rgba(255, 100, 100, 0.1);
+    color: #ff6464;
+}
+
+.total-revenue {
+    font-weight: 600;
+    font-size: 1.1em;
+    color: #2196f3;
+    padding: 4px 8px;
+    background-color: rgba(33, 150, 243, 0.1);
+    border-radius: 4px;
+}
+
+.new-invoice-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: #4f46e5;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 29%;
+}
+
+.new-invoice-btn:hover {
+    background-color: #4338ca;
+}
+
+/* Controls Section */
+.invoices-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 1rem;
+}
+
+.search-container {
+    position: relative;
+    flex: 1;
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+}
+
+.search-input {
+    width: 100%;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+}
+
+.filters-container {
+    display: flex;
+    gap: 1rem;
+}
+
+.filter-select {
+    padding: 0.75rem 2.5rem 0.75rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #374151;
+    background-color: white;
+    cursor: pointer;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%236B7280'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 1.5em 1.5em;
+}
+
+/* Table Styles */
+.invoices-table-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.invoices-table {
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+.invoices-table th {
+    background-color: #f9fafb;
+    padding: 0.75rem 1.5rem;
+    text-align: left;
+    font-weight: 500;
+    color: #374151;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.invoices-table td {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid #e5e7eb;
+    color: #111827;
+}
+
+.invoices-table tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+/* Customer Info */
+.customer-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.customer-name {
+    font-weight: 500;
+    color: #111827;
+}
+
+.customer-email {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+/* Status Badges */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+.status-paid {
+    background-color: #dcfce7;
+    color: #059669;
+}
+
+.status-pending {
+    background-color: #fef3c7;
+    color: #d97706;
+}
+
+.status-overdue {
+    background-color: #fee2e2;
+    color: #dc2626;
+}
+
+.status-cancelled {
+    background-color: #f3f4f6;
+    color: #6b7280;
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.action-buttons button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.view-btn {
+    background-color: #e0e7ff;
+    color: #4f46e5;
+}
+
+.view-btn:hover {
+    background-color: #c7d2fe;
+}
+
+.edit-btn {
+    background-color: #e0f2fe;
+    color: #0284c7;
+}
+
+.edit-btn:hover {
+    background-color: #bae6fd;
+}
+
+.delete-btn {
+    background-color: #fee2e2;
+}
+
+.delete-btn:hover {
+    background-color: #fecaca;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .invoices-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filters-container {
+        flex-wrap: wrap;
+    }
+
+    .filter-select {
+        flex: 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .invoices-main-container {
+        padding: 1rem;
+        margin-left: -20px;
+        width: calc(100% + 20px);
+    }
+
+    .invoices-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .new-invoice-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .invoice-stats {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .invoices-table th:nth-child(4),
+    .invoices-table td:nth-child(4),
+    .invoices-table th:nth-child(5),
+    .invoices-table td:nth-child(5) {
+        display: none;
+    }
+
+    .action-buttons {
+        flex-direction: column;
+    }
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.invoices-main-container {
+    animation: fadeIn 0.3s ease-out;
+}
+
