@@ -1,0 +1,270 @@
+.stock-alerts-container {
+    padding: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-top: 55px;
+}
+
+.alerts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.header-title {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.header-title h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #2c3e50;
+}
+
+.alert-count {
+    background-color: #e74c3c;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 14px;
+}
+
+.filter-controls {
+    display: flex;
+    gap: 12px;
+}
+
+.filter-select {
+    padding: 8px 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.alerts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 20px;
+}
+
+.alert-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    gap: 16px;
+    border-left: 4px solid #ddd;
+}
+
+.alert-card.high {
+    border-left-color: #e74c3c;
+}
+
+.alert-card.medium {
+    border-left-color: #f39c12;
+}
+
+.alert-card.low {
+    border-left-color: #3498db;
+}
+
+.alert-icon {
+    font-size: 24px;
+    color: #7f8c8d;
+    display: flex;
+    align-items: flex-start;
+    padding-top: 4px;
+}
+
+.alert-content {
+    flex: 1;
+}
+
+.alert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.alert-header h3 {
+    margin: 0;
+    font-size: 18px;
+    color: #2c3e50;
+}
+
+.priority-badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.priority-badge.high {
+    background-color: #fde8e8;
+    color: #e74c3c;
+}
+
+.priority-badge.medium {
+    background-color: #fef3c7;
+    color: #f39c12;
+}
+
+.priority-badge.low {
+    background-color: #e1f0ff;
+    color: #3498db;
+}
+
+.alert-details {
+    margin-bottom: 16px;
+}
+
+.alert-details p {
+    margin: 4px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.timestamp {
+    color: #95a5a6 !important;
+    font-size: 12px !important;
+    margin-top: 8px !important;
+}
+
+.alert-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.alert-actions button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background-color 0.2s;
+}
+
+.view-btn {
+    background-color: #f8f9fa;
+    color: #2c3e50;
+}
+
+.view-btn:hover {
+    background-color: #e9ecef;
+}
+
+.order-btn {
+    background-color: #3498db;
+    color: white;
+}
+
+.order-btn:hover {
+    background-color: #2980b9;
+}
+
+.resolve-btn {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.resolve-btn:hover {
+    background-color: #27ae60;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .alerts-header {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+
+    .filter-controls {
+        flex-direction: column;
+    }
+
+    .alerts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .alert-actions {
+        flex-wrap: wrap;
+    }
+
+    .alert-actions button {
+        flex: 1;
+        min-width: 120px;
+    }
+}
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 90%;
+}
+
+.form-group {
+    margin: 1rem 0;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.modal-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.modal-actions button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.modal-actions button:first-child {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.modal-actions button:last-child {
+    background-color: #f44336;
+    color: white;
+} 
