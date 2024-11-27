@@ -30,52 +30,10 @@ deploy:
     memory: 512Mi
   restartPolicy: Always
 expose:
-  api:
-    context: /api
-    port: 8080
-    basePath: /api
-    definitions:
-      - path: /test
-        method: GET
-      - path: /debug/db-test
-        method: GET
-      - path: /debug/orders-test
-        method: GET
-      - path: /orders
-        method: GET
-      - path: /inventory
-        method: GET
-      - path: /inventory
-        method: POST
-      - path: /inventory/{item_id}
-        method: PUT
-      - path: /inventory/{item_id}
-        method: DELETE
-      - path: /warehouses
-        method: GET
-      - path: /warehouses
-        method: POST
-      - path: /warehouses
-        method: OPTIONS
-      - path: /warehouses/{warehouse_id}
-        method: PUT
-      - path: /warehouses/{warehouse_id}
-        method: DELETE
-      - path: /warehouses/{warehouse_id}
-        method: OPTIONS
-      - path: /alerts
-        method: GET
-      - path: /alerts/{alert_id}/resolve
-        method: PUT
-      - path: /locations
-        method: GET
-      - path: /customers
-        method: GET
-      - path: /customers
-        method: POST
-      - path: /suppliers
-        method: GET
-      - path: /suppliers
-        method: POST
-      - path: /suppliers
-        method: OPTIONS
+  endpoints:
+    - name: Inventory Management REST API
+      type: REST
+      port: 8080
+      context: /api
+      networkVisibility: Public
+      basePath: /api
