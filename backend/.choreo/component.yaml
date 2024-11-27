@@ -57,6 +57,12 @@ expose:
         method: POST
       - path: /warehouses
         method: OPTIONS
+      - path: /warehouses/{warehouse_id}
+        method: PUT
+      - path: /warehouses/{warehouse_id}
+        method: DELETE
+      - path: /warehouses/{warehouse_id}
+        method: OPTIONS
       - path: /alerts
         method: GET
       - path: /alerts/{alert_id}/resolve
