@@ -41,3 +41,6 @@ media/
 
 # Misc
 .DS_Store 
+
+# Choreo
+!.choreo/
