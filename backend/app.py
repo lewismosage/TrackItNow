@@ -15,6 +15,7 @@ from auth import auth_bp, jwt
 from models.user import User
 from models.order import Order, OrderItem
 from models.warehouse import Warehouse
+import os
 
 app = Flask(__name__)
 
@@ -23,7 +24,7 @@ cors = CORS(app, resources={
     r"/api/*": {
         "origins": [
             "http://localhost:3000",  # Local development
-            "https://your-frontend-domain.onrender.com"  # Add your Render frontend domain
+            "https://inventory-management-frontend.onrender.com"  # Update this with your actual Render frontend domain
         ],
         "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
         "allow_headers": ["Content-Type", "Authorization"]
@@ -31,7 +32,11 @@ cors = CORS(app, resources={
 })
 
 # Database configuration
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///inventory.db'
+DATABASE_URL = os.environ.get('DATABASE_URL')
+if DATABASE_URL and DATABASE_URL.startswith('postgres://'):
+    DATABASE_URL = DATABASE_URL.replace('postgres://', 'postgresql://')
+
+app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL or 'sqlite:///inventory.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = 'your-secret-key'  # Change this to a secure secret
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(hours=1)
