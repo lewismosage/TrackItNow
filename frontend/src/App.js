@@ -20,6 +20,7 @@ import Suppliers from './pages/Suppliers';
 import AboutUs from './pages/AboutUs';
 import NewFeatures from './pages/NewFeatures';
 import './App.css';
+import 'react-confirm-alert/src/react-confirm-alert.css';
 
 // To only protect certain actions, not the entire route
 const ProtectedComponent = ({ children }) => {

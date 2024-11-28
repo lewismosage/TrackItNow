@@ -23,8 +23,8 @@ app = Flask(__name__)
 cors = CORS(app, resources={
     r"/api/*": {
         "origins": [
-            "http://localhost:3000",  # Local development
-            "https://your-choreo-frontend-url.com"  # Update this with your Choreo frontend URL
+            "http://localhost:3000",
+            "https://trackitnow.onrender.com"  # Replace with your actual frontend URL
         ],
         "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
         "allow_headers": ["Content-Type", "Authorization"]
@@ -38,7 +38,7 @@ if DATABASE_URL and DATABASE_URL.startswith('postgres://'):
 
 app.config['SQLALCHEMY_DATABASE_URI'] = DATABASE_URL or 'sqlite:///inventory.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['JWT_SECRET_KEY'] = 'your-secret-key'  # Change this to a secure secret
+app.config['JWT_SECRET_KEY'] = os.environ.get('JWT_SECRET_KEY', 'c91d0598b38f422680d85e06856d1f94d0c1c305e04e4e06')
 app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(hours=1)
 app.config['JWT_REFRESH_TOKEN_EXPIRES'] = timedelta(days=30)
 

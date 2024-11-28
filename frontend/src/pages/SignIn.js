@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import '../styles/SignIn.css';
+import { config } from '../config';
 
 const SignIn = () => {
   const [userName, setUserName] = useState('');
@@ -10,7 +11,7 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const response = await fetch(`${config.API_URL}/auth/login`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

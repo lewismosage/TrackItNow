@@ -4,6 +4,7 @@ import "../styles/Register.css";
 import userIcon from "../components/assets/person.png";
 import emailIcon from "../components/assets/email.png";
 import passwordIcon from "../components/assets/password.png";
+import { config } from '../config';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -23,7 +24,7 @@ const Register = () => {
     setError("");
     
     try {
-      const response = await fetch('http://localhost:5000/api/auth/register', {
+      const response = await fetch(`${config.API_URL}/auth/register`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

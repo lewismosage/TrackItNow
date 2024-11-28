@@ -1,8 +1,9 @@
 import api from '../utils/axios';
+import { config } from '../config';
 
 export const fetchOrders = async () => {
     try {
-        const response = await fetch('http://localhost:5000/api/orders', {
+        const response = await fetch(`${config.API_URL}/orders`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
