@@ -1,11 +1,12 @@
 services:
   - type: static
     name: trackitnow-frontend
-    rootDir: frontend
-    buildCommand: npm install && npm run build:prod
-    publishDir: build
-    env: node
-    nodeVersion: 18
+    buildCommand: |
+      cd frontend
+      npm install
+      npm run build:prod
+    publishDir: frontend/build
+    nodeVersion: 16
     envVars:
       - key: REACT_APP_API_URL
-        value: https://trackitnow-backend.onrender.com/api 
+        value: https://trackitnow-backend.onrender.com/api
