@@ -23,7 +23,7 @@ cors = CORS(app, resources={
     r"/api/*": {
         "origins": [
             "http://localhost:3000",  # Local development
-            "https://your-frontend-domain.choreo.dev"  # Add your Choreo frontend domain
+            "https://your-frontend-domain.onrender.com"  # Add your Render frontend domain
         ],
         "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
         "allow_headers": ["Content-Type", "Authorization"]
