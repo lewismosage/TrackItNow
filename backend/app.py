@@ -24,7 +24,7 @@ cors = CORS(app, resources={
     r"/api/*": {
         "origins": [
             "http://localhost:3000",  # Local development
-            "https://inventory-management-frontend.onrender.com"  # Update this with your actual Render frontend domain
+            "https://your-choreo-frontend-url.com"  # Update this with your Choreo frontend URL
         ],
         "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
         "allow_headers": ["Content-Type", "Authorization"]
@@ -130,6 +130,11 @@ def get_inventory():
         print(f"Error in get_inventory: {str(e)}")
         return jsonify({'error': 'Internal server error'}), 500
 
-if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 8080))
-    app.run(host='0.0.0.0', port=port) 
+if __name__ == '_main_':
+    print("Registered Blueprints:")
+    for blueprint in app.blueprints:
+        print(f"- {blueprint}")
+        rules = [rule for rule in app.url_map.iter_rules() if rule.endpoint.startswith(blueprint)]
+        for rule in rules:
+            print(f"  * {rule}")
+    app.run(debug=True)
