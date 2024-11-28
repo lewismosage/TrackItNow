@@ -1,6 +1,7 @@
 services:
   - type: web
     name: trackitnow-frontend
+    rootDir: frontend
     buildCommand: npm install && npm run build:prod
     publishDir: build
     envVars:
