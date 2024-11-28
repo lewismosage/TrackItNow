@@ -3,7 +3,11 @@ services:
     name: inventory-management-api
     env: python
     rootDir: backend
-    buildCommand: curl -sSL https://install.python-poetry.org | python3 - && poetry install
+    buildCommand: |
+      pwd && ls -la &&
+      curl -sSL https://install.python-poetry.org | python3 - &&
+      poetry config virtualenvs.create false &&
+      poetry install
     startCommand: poetry run gunicorn app:app --bind 0.0.0.0:$PORT
     envVars:
       - key: FLASK_ENV
