@@ -1,5 +1,5 @@
 services:
-  - type: web
+  - type: static
     name: trackitnow-frontend
     buildCommand: cd frontend && npm install && npm run build:prod
     publishDir: frontend/build
