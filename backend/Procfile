@@ -1,2 +1,1 @@
-web: cd backend && gunicorn app:app --bind 0.0.0.0:$PORT
-release: cd backend && python manage.py create_db
+web: gunicorn app:app
