@@ -1,4 +1,4 @@
-schemaVersion: v1
+schemaVersion: 1.0
 metadata:
   name: inventory-management-backend
   description: Flask backend for inventory management system
