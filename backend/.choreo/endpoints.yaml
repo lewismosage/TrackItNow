@@ -1,6 +1,8 @@
 version: 0.1
 endpoints:
   - name: inventory-management-backend
+    port: 8080
+    type: REST
     schemaVersion: 1.0
     metadata:
       name: inventory-management-backend
@@ -14,15 +16,15 @@ endpoints:
         - name: FLASK_ENV
           value: production
         - name: DB_HOST
-          value: ${DB_HOST}  # From Choreo database
+          value: ${DB_HOST}
         - name: DB_PORT
-          value: ${DB_PORT}  # From Choreo database
+          value: ${DB_PORT}
         - name: DB_USER
-          value: ${DB_USER}  # From Choreo database
+          value: ${DB_USER}
         - name: DB_NAME
-          value: ${DB_NAME}  # From Choreo database
+          value: ${DB_NAME}
         - name: DB_PWD
-          value: ${DB_PWD}   # From Choreo database
+          value: ${DB_PWD}
         - name: SECRET_KEY
           value: ${SECRET_KEY}
         - name: JWT_SECRET_KEY
@@ -34,8 +36,6 @@ endpoints:
       restartPolicy: Always
     expose:
       api:
-        type: REST
-        port: 8080
         context: /api
         networkVisibility: Public
         basePath: /api
