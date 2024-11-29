@@ -131,7 +131,7 @@ This project is licensed under the [MIT License](LICENSE).
 
 For questions or collaboration, feel free to reach out:  
 - **Name**: Lewis Mosage  
-- **Email**: [maendalewis20@email@.com](mailto:maendalewis20@gmail.com)  
+- **Email**: [maendalewis20@gmail.com](mailto:maendalewis20@gmail.com)  
 - **GitHub**: [https://github.com/lewismosage](https://github.com/lewismosage)
 
 ---
