@@ -1,7 +1,3 @@
-Here’s a professional and comprehensive `README.md` file for your **TrackItNow** project:
-
----
-
 # TrackItNow - Inventory Management Tracking System
 
 **TrackItNow** is a robust Inventory Management Tracking System designed to simplify inventory management for businesses. Built with a powerful combination of **React.js** for the frontend and **Flask** for the backend, the system offers secure authentication, real-time stock tracking, supplier management, and advanced analytics.
