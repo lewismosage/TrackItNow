@@ -195,20 +195,34 @@ const Warehouses = () => {
 
     const handleSaveWarehouse = async (warehouseData) => {
         try {
+            console.log('Starting warehouse save operation...');
             if (selectedWarehouse) {
+                console.log('Updating existing warehouse:', selectedWarehouse.id);
                 const updatedWarehouse = await updateWarehouse(selectedWarehouse.id, warehouseData);
+                console.log('Warehouse updated successfully:', updatedWarehouse);
                 setWarehouses(prev => 
                     prev.map(w => w.id === selectedWarehouse.id ? updatedWarehouse : w)
                 );
             } else {
+                console.log('Creating new warehouse:', warehouseData);
                 const newWarehouse = await createWarehouse(warehouseData);
-                setWarehouses(prev => [...prev, newWarehouse]);
+                console.log('New warehouse created:', newWarehouse);
+                setWarehouses(prev => {
+                    console.log('Previous warehouses:', prev);
+                    const updated = [...prev, newWarehouse];
+                    console.log('Updated warehouses:', updated);
+                    return updated;
+                });
             }
             setSelectedWarehouse(null);
             setShowWarehouseModal(false);
         } catch (error) {
-            console.error('Failed to save warehouse:', error);
-            // Handle error (show notification, etc.)
+            console.error('Detailed save error:', {
+                message: error.message,
+                response: error.response?.data,
+                status: error.response?.status
+            });
+            alert(error.response?.data?.message || 'Failed to save warehouse');
         }
     };
 
