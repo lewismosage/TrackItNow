@@ -21,35 +21,32 @@ const Register = () => {
 
   const register = async (e) => {
     e.preventDefault();
-    setError("");
-    
     try {
-      const response = await fetch(`${config.API_URL}/auth/register`, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          username: userName,
-          password: password,
-          email: email,
-          first_name: firstName,
-          last_name: lastName
-        }),
-      });
-      
-      const data = await response.json();
+        const response = await fetch(`${config.API_URL}/auth/register`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                // Add any other required headers
+            },
+            body: JSON.stringify({
+                username: userName,
+                password: password,
+                email: email,
+                first_name: firstName,
+                last_name: lastName
+            })
+        });
 
-      if (response.ok) {
-        localStorage.setItem('token', data.access_token);
-        localStorage.setItem('username', userName);
-        navigate('/dashboard');
-      } else {
-        setError(data.error || 'Registration failed');
-      }
+        if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.message || 'Registration failed');
+        }
+
+        const data = await response.json();
+        // Handle successful registration
     } catch (error) {
-      console.error("Registration failed:", error);
-      setError("Registration failed. Please try again.");
+        console.error('Registration failed:', error);
+        setError(error.message);
     }
   };
 
