@@ -4,7 +4,7 @@ Here’s a professional and comprehensive `README.md` file for your **TrackItNow
 
 # TrackItNow - Inventory Management Tracking System
 
-**TrackItNow** is a robust Inventory Management Tracking System designed to simplify inventory management for businesses. Built with a powerful combination of **React.js** for the frontend and **Django/Flask** for the backend, the system offers secure authentication, real-time stock tracking, supplier management, and advanced analytics.
+**TrackItNow** is a robust Inventory Management Tracking System designed to simplify inventory management for businesses. Built with a powerful combination of **React.js** for the frontend and **Flask** for the backend, the system offers secure authentication, real-time stock tracking, supplier management, and advanced analytics.
 
 ---
 
@@ -38,7 +38,7 @@ Here’s a professional and comprehensive `README.md` file for your **TrackItNow
 - CSS (Responsive Design)  
 
 ### **Backend**  
-- Django/Flask  
+- Flask  
 - RESTful APIs  
 
 ### **Database**  
@@ -46,8 +46,8 @@ Here’s a professional and comprehensive `README.md` file for your **TrackItNow
 
 ### **Tools and Deployment**  
 - Docker (for containerization)  
-- Render/Railway.app (backend deployment)  
-- Netlify/Vercel (frontend deployment)  
+- Render (backend deployment)  
+- Render/Choreo (frontend deployment)  
 
 ---
 
@@ -56,7 +56,7 @@ Here’s a professional and comprehensive `README.md` file for your **TrackItNow
 ### **Backend Setup**
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/your-username/trackitnow-backend.git
+   git clone https://github.com/lewismosage/trackitnow-backend.git
    cd trackitnow-backend
    ```
 2. Create and activate a virtual environment:  
@@ -81,7 +81,7 @@ Here’s a professional and comprehensive `README.md` file for your **TrackItNow
 ### **Frontend Setup**
 1. Clone the repository:  
    ```bash
-   git clone https://github.com/your-username/trackitnow-frontend.git
+   git clone https://github.com/lewismosage/trackitnow-frontend.git
    cd trackitnow-frontend
    ```
 2. Install dependencies:  
@@ -139,5 +139,3 @@ For questions or collaboration, feel free to reach out:
 - **GitHub**: [https://github.com/lewismosage](https://github.com/lewismosage)
 
 ---
-
-Replace placeholders such as `your-username`, `your-email@example.com`, and the live demo links with the actual details for your project!
